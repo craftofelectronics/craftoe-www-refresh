@@ -1,0 +1,5 @@
+{% if include.fixed %}
+  {% assign fixed="fa-fw" %}
+{% endif %}
+
+<i class="fa fa-{{include.name}} {{fixed}} fa-{{include.size}}"></i>

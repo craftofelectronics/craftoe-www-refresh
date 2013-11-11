@@ -1,0 +1,22 @@
+        
+<ul class="pagination noprint">
+  {% for index in (1..20) %}
+    {% for p in site.pages %}
+    
+      {% if (page.title == p.title) %}
+      
+      {% assign class="active" %}
+      {% else %}
+      {% assign class="" %}
+      {% endif %}
+      
+      {% if (p.url contains page.tutorial) and (p.index == index) %}        
+        {% if p.short %}
+          <li class="{{class}}"><a href="{{p.url}}">{{p.short}}</a></li>
+        {% else %}
+          <li class="{{class}}"><a href="{{p.url}}">{{p.title}}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+{% endfor %}
+</ul>
