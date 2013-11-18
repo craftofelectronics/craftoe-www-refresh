@@ -1,7 +1,7 @@
 ---
 title: Starting the Final Report
 activity: "writing"
-due: "20131021"
+date: "20131021"
 release: "20131008"
 layout: default
 ---

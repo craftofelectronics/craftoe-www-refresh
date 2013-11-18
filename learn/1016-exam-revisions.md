@@ -1,7 +1,7 @@
 ---
 title: Exam Revisions
 activity: "read"
-due: "20131016"
+date: "20131016"
 release: "20131008"
 layout: default
 ---

@@ -1,7 +1,7 @@
 ---
 title: Pushbuttons and Resistors
 activity: "reading"
-due: "20131009"
+date: "20131009"
 release: "now"
 layout: default
 ---

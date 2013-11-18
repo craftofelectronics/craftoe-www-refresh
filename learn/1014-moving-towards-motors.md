@@ -1,7 +1,7 @@
 ---
 title: Moving Towards Motors
 activity: "reading"
-due: "20131014"
+date: "20131014"
 release: "20131009"
 layout: default
 ---

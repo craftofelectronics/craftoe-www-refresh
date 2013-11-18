@@ -1,7 +1,7 @@
 ---
 title: "Using Multimeters"
 activity: "video"
-due: "201308281000"
+date: "201308281000"
 release: "now"
 layout: "default"
 ---

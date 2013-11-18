@@ -1,7 +1,7 @@
 ---
 title: Weekly Project Updates
 activity: "writing"
-due: "20131028"
+date: "20131028"
 release: "20131008"
 layout: default
 ---

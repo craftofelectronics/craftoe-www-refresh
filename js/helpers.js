@@ -68,8 +68,6 @@ var getIcon = function (allcats) {
 }
 
 var isReleased = function (after) { 
-  
-
   /* Here's a way to cheat when testing on localhost. 
   I can pretend it is some date in the future for purposes of 
   testing my release dates. */
@@ -120,7 +118,7 @@ var getRangeColor = function (mom) {
       return "label-success";
     }
   } else {
-    return "";
+    return "label-default";
   }
 }
 

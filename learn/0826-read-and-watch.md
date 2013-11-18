@@ -1,7 +1,7 @@
 ---
 title: "Read and Watch"
 activity: "reading"
-due: "201308252000"
+date: "201308252000"
 release: "now"
 layout: "default"
 ---

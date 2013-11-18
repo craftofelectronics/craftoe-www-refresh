@@ -1,7 +1,7 @@
 ---
 title: Prepping Ohm's
 activity: "read"
-due: "201309091000"
+date: "201309091000"
 release: "now"
 layout: default
 ---

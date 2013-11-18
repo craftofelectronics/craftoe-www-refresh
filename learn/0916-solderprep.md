@@ -1,7 +1,7 @@
 ---
 title: Prepping for the Build
 activity: "read"
-due: "20130916"
+date: "20130916"
 release: "now"
 layout: default
 ---

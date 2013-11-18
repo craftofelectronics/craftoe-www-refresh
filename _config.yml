@@ -1,4 +1,22 @@
-name: Your New Jekyll Site
-markdown: redcarpet
+# Logos should be roughly 180 x 120
+# They go in /css/images/
+nav_logo: craftoe-logo-180.png
 
+# I recommend 
+# http://colorschemedesigner.com/#
+# with "Triad" for color selection.
+
+# Blue
+nav_color: "rgb(28, 72, 117)"  
+# White
+nav_link_color: "rgba(255,255,255,0.3)"
+# Green
+nav_hover_color: "rgb(120, 180, 50)"
+
+twitter: craftoe
+
+# These values probably have no impact whatsoever.
+name: Craft of Electronics
+markdown: redcarpet
 moustache: "{{=[[ ]]=}}"
+

@@ -1,7 +1,7 @@
 ---
 title: "Read Chapter 2"
 activity: "reading"
-due: "201309041000"
+date: "201309041000"
 release: "now"
 layout: "default"
 ---

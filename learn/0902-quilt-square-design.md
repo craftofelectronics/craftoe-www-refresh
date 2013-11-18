@@ -1,7 +1,7 @@
 ---
 title: "Quilt Square Design"
 activity: "make"
-due: "201309021000"
+date: "201309021000"
 release: "now"
 layout: "default"
 ---

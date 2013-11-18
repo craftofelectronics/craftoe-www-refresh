@@ -1,7 +1,7 @@
 ---
 title: Drawing Circuits and Idea Generation
 activity: "read"
-due: "201309111000"
+date: "201309111000"
 release: "now"
 layout: default
 ---

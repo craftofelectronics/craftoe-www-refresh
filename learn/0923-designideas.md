@@ -1,7 +1,7 @@
 ---
 title: Developing a Project Plan
 activity: "write"
-due: "20130923"
+date: "20130923"
 release: "now"
 layout: default
 ---
