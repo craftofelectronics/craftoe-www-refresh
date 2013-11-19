@@ -1,4 +1,6 @@
-<script>
+---
+---
+
 var todayInserted = false;
 var prevDate = "";
 
@@ -9,7 +11,7 @@ var makeRow = function (page) {
   var url = page.url;
   var title = page.title;
   var category = page.category;
-  var due = page.due;
+  var due = page.date;
   var after = page.release;
 
   var activity;
@@ -40,27 +42,29 @@ var makeRow = function (page) {
     
     var diff = m.diff(moment(), 'days');
     var difference = "";
+    // This 'if' is redundant now... 20131118
     if (diff >= 0) {
+      difference = m.from(moment());
+    } else {
+      // So we can have spans in the past.
       difference = m.from(moment());
     }
   
   // TODO
-  if (url.indexOf("learn") != -1
-      && isReleased(after)) {
-      
+  if (url.indexOf("learn") != -1) {
+    if (isReleased(after)) {  
       difference = "<span class='label " + 
           getRangeColor(m) + 
           " pull-right'>" +
           difference + 
           "</span>";
-    }
+    }  
+  }
   
-  // CLASS = Don't bother
   if (url.indexOf("interact") != -1) {
     difference = "<span class='label label-info pull-right'>" 
-                  + "in class"//awesome("group") 
+                  + "in class"
                   + "</span>";
-
   } // END CLASS    
   
   if (page.nolink == "true") {
@@ -78,7 +82,7 @@ var makeRow = function (page) {
   
   
   var filling = { due: dateString,
-                  activity: activity + onlyInFuture(due, difference),
+                  activity: activity + difference, // onlyInFuture(due, difference)
                   icon: icon,
                 };
   }
@@ -106,56 +110,3 @@ var makeRow = function (page) {
   }
 
 };
-
-
-var sortDueDates = function (a, b) {  
-  // Pad out the due dates, so I don't always
-  // have to specify an hour. And, so classes will
-  // sort correctly.
-  if (a.due.length < 8) {a.due = a.due + "0000";}
-  if (b.due.length < 8) {b.due = b.due + "0000";}  
-  if (a.due > b.due) { return 1; } else { return -1; }
-};
-
-/* Generate an array of page objects */
-var pages = [];
-
-var addToPages = function (filterString) {
-  {% for page in site.pages  %}
-    {% if page.title != "" %}
-      {% if (page.url contains "/learn")  %}
-        {url: "{{site.base}}{{page.url}}", 
-        title: "{{page.title}}", 
-        category: "{{page.activity}}", 
-        due: "{{page.due}}", 
-        release: "{{page.release}}",
-        nolink: "{{page.nolink}}"},
-      {% endif %}    
-    {% endif %}
-  {% endfor %}
-  
-}
-
-var sortPages = function () {
-
-  // Add the course time to everything
-  for (var i = 0 ; i < pages.length ; i++ ) {
-    due = pages[i].due;
-    //console.log ("Checking: " + due + " - " + due.length);
-    if (due.length <= 8) {
-      ///console.log ("Fixing: " + due)
-      pages[i].due = due + "{{site.classtime}}";
-    }
-  }
-  
-  pages.sort(sortDueDates).reverse();  
-}
-
-var renderPages () {
-  for (var i = 0; i < pages.length ; i++) {
-  
-    makeRow(pages[i]);  
-  }
-}
-
-</script>
