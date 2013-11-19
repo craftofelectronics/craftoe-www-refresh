@@ -24,7 +24,7 @@ inclass:
   
 todo:
   - learn
-  - tutorial
+#  - tutorial
 
 # These values probably have no impact whatsoever.
 markdown: redcarpet
