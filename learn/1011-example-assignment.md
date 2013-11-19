@@ -1,9 +1,11 @@
 ---
 title: "Read and Watch"
-activity: "reading"
 date: "201308252000"
 release: "now"
 layout: "default"
+categories: 
+  - learn
+  - reading
 ---
 
 We'll be doing a lot of reading and viewing of material out of class early on. It is likely that deeper understanding will come from iteration on the material. That means that we'll **read it** (and kinda understand), then **do it** (and understand better), then **revisit** the material (and hopefully get it better the second time around).

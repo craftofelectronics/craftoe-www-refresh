@@ -4,6 +4,11 @@ short: Objectives
 index: 1
 tutorial: "led"
 layout: default
+categories: 
+  - tutorial
+  - making
+date: 20131011
+release: now
 ---
 
 In this tutorial, you'll learn to **turn on the LED built into your Arduino**. This involves learning:

@@ -13,10 +13,21 @@ nav_link_color: "rgba(255,255,255,0.3)"
 # Green
 nav_hover_color: "rgb(120, 180, 50)"
 
+# Course details
+name: Craft of Electronics
+number: TAD 265
 twitter: craftoe
+classtime: 1300
+
+inclass:
+  - interact
+  
+todo:
+  - learn
+  - tutorial
 
 # These values probably have no impact whatsoever.
-name: Craft of Electronics
 markdown: redcarpet
+# Needed for Moustache.js
 moustache: "{{=[[ ]]=}}"
 

@@ -1,6 +1,7 @@
 ---
 ---
 
+String.prototype.contains = function(it) { return this.indexOf(it) != -1; };
 
 var dayName = function (d) {
   var days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"]
@@ -48,20 +49,18 @@ var icons = { "reading"     : awesome("book"),
             }
             
 var getIcon = function (allcats) {
-  cats  = allcats.split(",");
-  // For default parameters
-  // size = typeof size !== 'undefined' ? size : '16';
-  
   result = "";
-    
-  for (var cat in cats) {
-    sw = cats[cat].trim();
-    if (result == "") {
-      if (icons[sw] != undefined) {
-          result += icons[sw];
+  // console.log(Object.keys(icons));
+  ls = Object.keys(icons);
+  for (var i = 0 ; i < ls.length ; i++) {
+    cat = ls[i];
+    if (allcats.contains(cat)) {
+      if (result == "") {
+        // console.log("Cat: " + cat + " categories: " + allcats);
+        result += icons[cat];
+      } else {  
+        result += " , " + icons[cat];
       }
-    } else {  
-      result += " , " + icons[sw];
     }
   }
   return result;

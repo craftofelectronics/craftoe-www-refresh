@@ -6,14 +6,16 @@ var prevDate = "";
 
 var shownDates = [];
 
-var makeRow = function (page) {
+var makeRow = function (page, tableName) {
   // Because I changed from five params to an object late.
   var url = page.url;
   var title = page.title;
-  var category = page.category;
+  var categories = page.categories;
   var due = page.date;
   var after = page.release;
 
+  console.log("Categories: " + categories);
+  
   var activity;
   if (page.nolink == "true") {
     activity = title;
@@ -21,7 +23,7 @@ var makeRow = function (page) {
     activity = "<a href='" + url + "'>" + title + "</a>";  
   }
 
-  var icon      = getIcon(category);
+  var icon      = getIcon(categories);
   var filling   = false;
   var today     = moment();
   var todayString = today.format("ddd, MMM Do");
@@ -50,8 +52,13 @@ var makeRow = function (page) {
       difference = m.from(moment());
     }
   
-  // TODO
-  if (url.indexOf("learn") != -1) {
+  if (categories.contains("interact")) {
+    // console.log("Categories: " + categories);
+    difference = "<span class='label label-info pull-right'>" 
+                  + "in class"
+                  + "</span>";
+  } else {
+    /* Assume anything not explicitly in-class is due at some point? */
     if (isReleased(after)) {  
       difference = "<span class='label " + 
           getRangeColor(m) + 
@@ -59,13 +66,8 @@ var makeRow = function (page) {
           difference + 
           "</span>";
     }  
-  }
-  
-  if (url.indexOf("interact") != -1) {
-    difference = "<span class='label label-info pull-right'>" 
-                  + "in class"
-                  + "</span>";
-  } // END CLASS    
+    
+  }  
   
   if (page.nolink == "true") {
     difference = "";
@@ -99,13 +101,13 @@ var makeRow = function (page) {
         "&nbsp;&nbsp;" +
         awesome("hand-o-left") +
         "</td></tr>";
-      $("#activities > tbody:last").append(here);      
+      $("#" + tableName + " > tbody:last").append(here);      
       todayInserted = true;
     }
     
     // Insert the row first
     var row = Mustache.to_html(pie, filling);
-    $("#activities > tbody:last").append(row);
+    $("#" + tableName + " > tbody:last").append(row);
     
   }
 
