@@ -10,11 +10,8 @@ This is the start of a long journey, and reflecting on the work you do at every 
 
 <div class="alert alert-success" style="margin:3em;">
 <i class="fa fa-magic fa-2x pull-left"></i>
-<p>A critical part of your learning is recording things you don't understand... <i>yet</i>. For example, when you read the Wikipedia article, there were probably terms you don't yet understand, or concepts that don't make sense yet.
-</p>
-<p>When you encounter things you don't understand, <b>record your questions in your notebook.</b> Then, you might ask those questions in the Craft of Electronics forum. Sometimes, you'll get an answer you don't understand. Sometimes, you'll walk away knowing a bit more than before. </p>
-
-<p>Either way, the <b>active process of questioning what you don't know</b> and <b>asking questions of others</b> is an essential part of learning.</p>
+<p>A critical part of your learning is recording things you don't understand... <i>yet</i>.</p>
+<p>When you encounter things you don't understand, <b>record your questions in your notebook.</b> Then, you might ask those questions in the <i>Craft of Electronics</i> forum. In no small part, the <b>active process of questioning what you don't know</b> and <b>asking questions of others</b> is an essential part of learning.</p>
 </div>
 
 1. What kinds of errors did you encounter while programming the Arduino? Did you write them down, including the solutions that you came up with?

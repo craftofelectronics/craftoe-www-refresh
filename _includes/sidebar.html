@@ -1,17 +1,20 @@
 <!-- Sidebar -->
 <div id="sidebar-wrapper">
   <img src="/css/images/{{site.nav_logo}}" class="img-responsive"/>
-  
-  <nav class="cl-effect-1">
-    <a href="/">{% include fa name="home fa-fw" size="2x" %} Home</a>
-    <a href="/infra/syllabus.html">{% include fa name="book fa-fw" size="2x" %} Syllabus</a>
-    <a href="/tutorials/">{% include fa name="puzzle-piece fa-fw" size="2x" %} Tutorials</a>
-    <a href="/resources/" >{% include fa name="lightbulb-o fa-fw" size="2x" %} Resources</a>
+  <ul class="nav nav-pills nav-stacked">
+   
+    <li class="list-group-item"><a href="/">{% include fa name="home fa-fw" size="2x" %} Home</a></li>
+   
+    <li class="list-group-item"><a href="/infra/syllabus.html">{% include fa name="book fa-fw" size="2x" %} Syllabus</a></li>
+   
+    <li class="list-group-item"><a href="/tutorials/">{% include fa name="puzzle-piece fa-fw" size="2x" %} Tutorials</a></li>
+   
+    <li class="list-group-item"><a href="/resources/" >{% include fa name="lightbulb-o fa-fw" size="2x" %} Resources</a></li>
     <!-- <a href="{{site.moodle}}">{% include fa name="sign-in fa-fw" size="2x" %} Moodle</a> -->
     <hr/>
     {% if site.twitter %}
-    <a href="http://twitter.com/{{site.twitter}}">{% include fa name="twitter fa-fw" size="2x" %} @craftoe</a>
+   
+    <li class="list-group-item"><a href="http://twitter.com/{{site.twitter}}">{% include fa name="twitter fa-fw" size="2x" %} @craftoe</a></li>
     {% endif %}
-  </nav>
-    
+  </ul>
 </div>

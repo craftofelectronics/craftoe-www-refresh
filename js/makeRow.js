@@ -32,8 +32,9 @@ var makeRow = function (page, tableName) {
   
   var pie = "{{site.moustache}}";
   pie += "<tr>";
-  pie += "<td>[[&due]]</td>";
+  pie += "<td>[[&difference]]</td>"
   pie += "<td>[[&icon]] &nbsp; [[&activity]]</td>";
+  pie += "<td>[[&due]]</td>";
   pie += "</tr>";
 
   // If it is an assignment or a class with a date
@@ -83,10 +84,12 @@ var makeRow = function (page, tableName) {
   shownDates.push(dateString);
   
   
-  var filling = { due: dateString,
-                  activity: activity + difference, // onlyInFuture(due, difference)
-                  icon: icon,
-                };
+  var filling = { 
+    due: dateString,
+    difference: difference,
+    activity: activity , // onlyInFuture(due, difference)
+    icon: icon,
+    };
   }
 
   if (filling) {
@@ -94,13 +97,16 @@ var makeRow = function (page, tableName) {
     // Insert a YOU ARE HERE
     if (!todayInserted && (today.diff(m, 'hours') - 1 >= 0)) {
 
-      var here = "<tr class='warning'><td width='20%'>" +
-        todayString +
-        "</td><td>" +
-        "<b>You Are Here</b> " +
+      var here = "<tr class='warning'>" +
+      "<td align='right'>" + awesome("hand-o-right") + "</td>" +
+        "<td><b>You Are Here</b> " +
         "&nbsp;&nbsp;" +
         awesome("hand-o-left") +
-        "</td></tr>";
+        "</td>"+
+        "<td width='20%'>" +
+         todayString +
+         "</td>" +
+        "</tr>";
       $("#" + tableName + " > tbody:last").append(here);      
       todayInserted = true;
     }

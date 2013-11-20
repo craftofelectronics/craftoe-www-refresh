@@ -7,8 +7,9 @@ layout: default
   <tbody>
 
   <tr>
-    <td width='20%' style='padding: 8px;'><h3>Due</h2></td>
-    <td width='80%' style='padding: 8px;'><h3>To Do</h2></td>
+    <td width='5%'> <h3></h3> </td>
+    <td width='75%' style='padding: 8px;'><h3>To Do</h2></td>
+    <td width='20%' style='padding: 8px;'><h3>Date</h2></td>
   </tr>
 </tbody>
 </table>
