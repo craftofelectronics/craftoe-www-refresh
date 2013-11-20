@@ -2,10 +2,52 @@
 title: Tutorials
 layout: default
 ---
+<!-- convert -crop 700x400+120+80 lego.jpg l2.png -->
+<!--  alt="http://www.flickr.com/photos/oskay/265879161/sizes/o/in/photostream/" -->
 
+{% assign first = 1 %}
+{% assign counter = 0 %}
+{% for ndx in (1..site.pages.size) %}
+  {% for p in site.pages  %}
+    {% if p.tutorialIndex == ndx %}
+
+      {% if (p.categories contains "tutorial") and (p.url contains "index") %}
+        <!-- counter: {{counter}} first: {{first}} -->
+ 
+    
+        {% if counter == 3 %}
+          {% assign counter = 0 %}
+        {% endif %}
+    
+        {% if counter == 0 and first == 0 %}
+          </div><div class="row top-buffer">
+        {% endif %}
+        {% if counter == 0 and first == 1 %}
+          {% assign first = 0 %}
+          <div class="row">
+        {% endif %}
+    
+        {% assign counter = counter | plus: 1 %}
+    
+        <div class="col-md-4 portfolio-item">
+          <a href="{{p.url}}">
+          <img class="img-responsive" src="/tutorials/{{p.tutorial}}/images/banner.png" />
+      
+          <h3><a href="{{p.url}}">{{p.title}}</a></h3>
+          <p>{{p.short}}</p>
+          <a class="btn btn-primary" href="{{p.url}}">View Project &nbsp; {% include fa name="arrow-right" size="lg" %}</a>
+        </div>
+      
+      
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</div>
+
+<!-- 
 <div class="row">
 
-  <!-- convert -crop 700x400+120+80 lego.jpg l2.png -->
   <div class="col-md-4 portfolio-item">
     <a href="led/">
     <img class="img-responsive" src="/tutorials/led/images/l2.png" alt="http://www.flickr.com/photos/oskay/265879161/sizes/o/in/photostream/"/>
@@ -28,3 +70,4 @@ layout: default
   </div>
 
 </div>
+-->

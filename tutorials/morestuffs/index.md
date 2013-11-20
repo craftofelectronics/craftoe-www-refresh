@@ -1,14 +1,14 @@
 ---
-title: Turning an LED On
+title: More Stuffs
 short: Objectives
 index: 1
-tutorialIndex: 3
-tutorial: "led"
+tutorialIndex: 7
+tutorial: "morestuffs"
 layout: default
 categories: 
   - tutorial
   - making
-date: 20121011
+date: 39991011
 release: now
 ---
 
