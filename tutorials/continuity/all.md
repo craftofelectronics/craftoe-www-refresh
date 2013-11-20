@@ -1,7 +1,7 @@
 ---
-title: Turning an LED On (Full)
+title: Checking Continuity (Full)
 short: One Page
-tutorial: "somethingamazing"
+tutorial: "continuity"
 index: 20
 layout: default
 ---
@@ -20,8 +20,6 @@ layout: default
 {% endfor %}
 </ol>
 </div>
-
-<div class="page-break"></div>
 
 {% for index in (1..limit) %}
   {% for p in site.pages %}
