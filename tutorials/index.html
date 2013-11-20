@@ -32,15 +32,15 @@ hideTitle: true
         {% assign counter = counter | plus: 1 %}
     
         <div class="col-md-4 portfolio-item">
-          <h3><a href="{{p.url}}">{{p.title}}</a></h3>
+          <h3><a href="{{site.base}}{{p.url}}">{{p.title}}</a></h3>
           
-          <a href="{{p.url}}">
-            <img class="img-responsive" src="/tutorials/{{p.tutorial}}/images/banner.png" />
+          <a href="{{site.base}}{{p.url}}">
+            <img class="img-responsive" src="{{site.base}}/tutorials/{{p.tutorial}}/images/banner.png" />
           </a>
           
           <p>{{p.blurb}}</p>
           
-          <a class="btn btn-primary" href="{{p.url}}">View Project &nbsp; {% include fa name="arrow-right" size="lg" %}</a>
+          <a class="btn btn-primary" href="{{site.base}}{{p.url}}">View Project &nbsp; {% include fa name="arrow-right" size="lg" %}</a>
         </div>
       
       

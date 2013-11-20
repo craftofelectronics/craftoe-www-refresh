@@ -18,6 +18,7 @@ name: Craft of Electronics
 number: TAD 265
 twitter: craftoe
 classtime: 1300
+base: /new
 
 inclass:
   - interact

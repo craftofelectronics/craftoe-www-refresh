@@ -8,7 +8,7 @@
       date: "{{p.date}}",
       categories: '{{page.categories}}', 
       release: '{{page.release}}',
-      nolink: '{{page.nolink}}'},
+      nolink: '{{page.nolink}}',
     },
     {% endcapture %}
   {% endif %}
@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
       </button>
       <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-      <a href="/"><img src="/css/images/craftoe-logo-180.png" height='80px'></a>
+      <a href="{{site.base}}/"><img src="{{site.base}}/css/images/craftoe-logo-180.png" height='80px'></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,11 +33,11 @@
         <!-- 
         <li><a href="/infra/syllabus.html">{% include fa name="book fa-fw" size="2x" %} Syllabus</a></li>
           -->
-        <li><a href="/tutorials/">
+        <li><a href="{{site.base}}/tutorials/">
           {% include fa name="puzzle-piece fa-fw" size="2x" %} Tutorials</a>
         </li>
         
-        <li><a href="/resources/" >{% include fa name="lightbulb-o fa-fw" size="2x" %} Resources</a></li>
+        <li><a href="{{site.base}}/resources/" >{% include fa name="lightbulb-o fa-fw" size="2x" %} Resources</a></li>
         <!-- <a href="{{site.moodle}}">{% include fa name="sign-in fa-fw" size="2x" %} Moodle</a> -->
         <!-- 
         {% if site.twitter %}

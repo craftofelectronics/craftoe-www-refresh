@@ -5,3 +5,28 @@ $("#menu-toggle").click(function(e) {
     $("#wrapper").toggleClass("active");
 });
 </script>
+
+
+{% if page.categories contains "due" %}
+
+<script> 
+
+  m = moment();
+  m = parseDueDate("{{page.date}}");
+
+  var diff = m.diff(moment(), 'days');
+  var difference = "";
+  if (diff >= 0) {
+    difference = m.from(moment());
+  }
+
+  difference = "<div style='padding:35px;' class='pull-right'><span style='font-size:24px;' class='label " + 
+      getRangeColor(m) + 
+      " pull-right'>" +
+      "Due " + difference + "."
+      "</span></div>";
+
+  $("#assignmentduein").html(difference);
+  </script>
+
+{% endif %}
