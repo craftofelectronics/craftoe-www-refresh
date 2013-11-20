@@ -1,6 +1,7 @@
 ---
 title: Tutorials
 layout: default
+hideTitle: true
 ---
 <!-- convert -crop 700x400+120+80 lego.jpg l2.png -->
 <!--  alt="http://www.flickr.com/photos/oskay/265879161/sizes/o/in/photostream/" -->
@@ -30,11 +31,14 @@ layout: default
         {% assign counter = counter | plus: 1 %}
     
         <div class="col-md-4 portfolio-item">
-          <a href="{{p.url}}">
-          <img class="img-responsive" src="/tutorials/{{p.tutorial}}/images/banner.png" />
-      
           <h3><a href="{{p.url}}">{{p.title}}</a></h3>
-          <p>{{p.short}}</p>
+          
+          <a href="{{p.url}}">
+            <img class="img-responsive" src="/tutorials/{{p.tutorial}}/images/banner.png" />
+          </a>
+          
+          <p>{{p.blurb}}</p>
+          
           <a class="btn btn-primary" href="{{p.url}}">View Project &nbsp; {% include fa name="arrow-right" size="lg" %}</a>
         </div>
       

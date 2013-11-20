@@ -17,16 +17,17 @@
     <div class="container">
       <div class="row">            
         <div class="col-md-12">
+          {% unless page.hideTitle %}
+            <h1>{{page.title}}</h1>
+          {% endunless %}
           {% if page.tutorial %}
           <div class="row">
             <div class="col-md-9">
-              <h1>{{page.title}}</h1> <br/>
               {% include tutorial-nav %}
             </div>
             <div class="col-md-3">
               <img class="img-responsive pull-right" 
-                 src="images/banner.png" 
-                 />
+                 src="images/banner.png" />
              </div>
            </div>
           {% endif %}

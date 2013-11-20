@@ -1,6 +1,7 @@
 ---
 title: Something Amazing
-short: "In this tutorial, you'll learn to turn on the LED built into your Arduino."
+short: Objectives
+blurb: "In this tutorial, you'll learn to turn on the LED built into your Arduino."
 index: 1
 tutorialIndex: 2
 tutorial: "somethingamazing"

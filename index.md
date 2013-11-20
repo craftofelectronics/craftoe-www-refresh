@@ -1,5 +1,6 @@
 ---
 title: At a Glance
+hideTitle: true
 layout: default
 ---
 

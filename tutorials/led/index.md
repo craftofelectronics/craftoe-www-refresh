@@ -20,3 +20,6 @@ In this tutorial, you'll learn to **turn on the LED built into your Arduino**. T
 
 1. A refresher on the "magic incantation" that every Arduino program must include for it to work: `setup()` and `loop()`.
 
+<hr/>
+
+Tutorial image CC licensed by [oskay](http://www.flickr.com/photos/oskay/265879161/sizes/o/in/photostream/).
