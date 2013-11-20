@@ -24,4 +24,4 @@ To be able to check continuity on a breadboard,  we need to learn:
 
 1. How to be safe when checking electrical continuity.
 
-Tutorial banner image [CC-BY by oskay](http://www.flickr.com/photos/oskay/2298069486/in/photostream/).
+Tutorial image CC licensed by [oskay](http://www.flickr.com/photos/oskay/2298069486/in/photostream/).

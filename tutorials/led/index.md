@@ -1,13 +1,15 @@
 ---
 title: Turning an LED On
 short: Objectives
+blurb: "How to turn an LED on, and what goes on in an LED."
 index: 1
 tutorialIndex: 3
 tutorial: "led"
 layout: default
 categories: 
   - tutorial
-  - making
+  - led
+  - resistor
 date: 20121011
 release: now
 ---
