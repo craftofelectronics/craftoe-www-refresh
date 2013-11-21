@@ -1,7 +1,7 @@
 ---
-title: Video
+title: Prep
 tutorial: "continuity"
-index: 3
+index: 30
 layout: default
 noprint: true
 ---
@@ -9,3 +9,4 @@ noprint: true
 <div class="videowrapper">
   <iframe src="//www.youtube.com/embed/bkjHTJ0e5d8" frameborder="0" allowfullscreen></iframe>
 </div>
+

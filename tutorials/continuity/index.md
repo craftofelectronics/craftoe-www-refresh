@@ -2,7 +2,7 @@
 title: Continuity Testing
 short: Objectives
 blurb: "How to measure electrical continuity on a breadboard with a multimeter."
-index: 1
+index: 10
 tutorialIndex: 1
 tutorial: "continuity"
 layout: default

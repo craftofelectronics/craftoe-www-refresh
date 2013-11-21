@@ -2,7 +2,7 @@
 title: Checking Continuity (Full)
 short: One Page
 tutorial: "continuity"
-index: 20
+index: 100
 layout: default
 ---
 
